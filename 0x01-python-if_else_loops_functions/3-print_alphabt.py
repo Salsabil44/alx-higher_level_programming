@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 for l in range(ord('a'), ord('z') + 1):
     if chr(l) not in ['e', 'q']:
-        print("{}".format(chr(f)), end="")
-print()  
+        print("{}".format(chr(l)), end="" if l < ord('z') else "\n") 
