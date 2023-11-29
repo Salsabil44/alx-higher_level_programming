@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-for num in range(97, 123):
-    if (num == 101) or (num == 113):
-        continue
-    print(chr(num).format(), end="")
-<<<<<<< HEAD
-
-=======
->>>>>>> 136ccde8041aff6f84fd940d0c298de8ed49376a
+[200~output = ""
+        for L in range(97, 123):
+            char = chr(L)
+                if char != 'q' and char != 'e':
+                        output += char
+                        print("{}".format(output), end="")
