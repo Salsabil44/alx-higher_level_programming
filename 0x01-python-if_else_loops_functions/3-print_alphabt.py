@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-[200~output = ""
-        for L in range(97, 123):
-            char = chr(L)
-                if char != 'q' and char != 'e':
-                        output += char
-                        print("{}".format(output), end="")
+for l in range(ord('a'), ord('z') + 1):
+    if chr(l) not in ['e', 'q']:
+        print("{}".format(chr(f)), end="")
+print()  
