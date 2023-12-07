@@ -1,21 +1,15 @@
 #!/usr/bin/python3
-
 def roman_to_int(roman_string):
-    if not isinstance(roman_string, str) or roman_string is None:
-        return 0
 
-    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    rs = 0
-    prev_val = 0
+    val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    r = 0
+    p = 0
 
-    for char in reversed(roman_string):
-        curr_val = roman_dict.get(char, 0)
-
-        if curr_val >= prev_val:
-            rs += curr_val
-        else:
-            rs -= curr_val
-
-        prev_val = curr_val
-
-    return rs
+    if type(roman_string) is str and roman_string:
+        for c in range(len(roman_string) - 1, -1, -1):
+            if val[roman_string[c]] >= p:
+                r += val[roman_string[c]]
+            else:
+                r -= val[roman_string[c]]
+            p = val[roman_string[c]]
+    return r
