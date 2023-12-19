@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-def safe_print_list(my_list=[], j=0):
+def safe_print_list(my_list=[], x=0):
     num = 0
-    for y in range(j):
+    for y in range(x):
         try:
             print(my_list[y], end="")
             num += 1
