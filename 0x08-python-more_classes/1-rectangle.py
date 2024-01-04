@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" empty class Rectangle that defines a rectangle
+""" empty class Rectangle defines  rectangle
 """
 
 
 class Rectangle:
     """ class rectangle"""
     def __init__(self, width=0, height=0):
-        """ instantiation with optional width and height"""
+        """  optional width and height"""
         self.width = width
         self.height = height
 
@@ -29,7 +29,7 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= NULL")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @height.setter
@@ -39,5 +39,5 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >= NULL")
+            raise ValueError("height must be >= 0")
         self.__height = value
