@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-""" LockedClass
-"""
 
 
 class LockedClass:
-    __slots__= ['first_name']
+    
 
+    def __setattr__(self, name, value):
+        
+        if name != "first_name":
+            raise AttributeError("'LockedClass' object has no attribute '" +
+                                 name + "'")
 
-    def __init__(self):
-        """Creates new instances of Locked Class."""
-
-        self.first_name = "first_name"
+    def __getattribute__(self, name):
+        
+        if name == "__dict__":
+            raise AttributeError("'LockedClass' object has no attribute '" +
+                                 name + "'")
