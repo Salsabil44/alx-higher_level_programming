@@ -7,7 +7,6 @@
  *
  * @p: Python Object
  * Return: no return
- *
  */
 
 void print_python_string(PyObject *p)
