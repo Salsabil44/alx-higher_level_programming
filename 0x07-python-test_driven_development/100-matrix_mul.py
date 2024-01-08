@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Module composed by a function that multiplies 2 matrices
+Module com multiplies 2 matrices
 
 """
 
