@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Module for test Square class """
+""" Module for test Square class  
+by salyy
+"""
 import unittest
 from io import StringIO
 from unittest import TestCase
