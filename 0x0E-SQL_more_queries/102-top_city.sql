@@ -1,11 +1,7 @@
--- displays average temp by city for july and august in descending order sally
-CREATE TABLE IF NOT EXISTS temp_july_aug
-       SELECT *
-       FROM temperatures
-       WHERE month = 7 OR month = 8;
-SELECT city, AVG(value) AS avg_temp
-FROM temp_july_aug
-GROUP BY city
-ORDER BY avg_temp DESC
-limit 3;
-
+-- lists all shows from hbtn_0d_tvshows_rate by their rating
+-- lists all rows of a table by the sum of a linked row sally
+SELECT title, SUM(tv_show_ratings.rate) 'rating'
+FROM tv_shows
+LEFT JOIN tv_show_ratings ON tv_show_ratings.show_id = tv_shows.id
+GROUP BY title
+ORDER BY rating DESC;
